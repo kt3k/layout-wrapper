@@ -1,12 +1,11 @@
 const wrap = require('gulp-wrap')
-const consolidate = require('consolidate')
 
 const fs = require('fs')
 const path = require('path')
 
 const ref = '\nSee https://github.com/kt3k/layout-wrapper'
 
-const engines = Object.keys(consolidate).filter(x => x !== 'requires')
+const engines = require('./engines')
 
 /**
  * @param {object} options - The options
