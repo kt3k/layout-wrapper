@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test/test.js",
-    "cov": "nyc npm test",
+    "cov": "nyc --reporter=lcov npm test",
     "codecov": "npm run cov && codecov"
   },
   "repository": {
