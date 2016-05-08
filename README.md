@@ -1,7 +1,8 @@
 # layout-wrapper v1.1.0 [![Circle CI](https://circleci.com/gh/kt3k/layout-wrapper.svg?style=svg)](https://circleci.com/gh/kt3k/layout-wrapper) [![codecov](https://codecov.io/gh/kt3k/layout-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/layout-wrapper)
 
-
 > Wrap the contents in the layout template. gulpfriendly.
+
+This module is designed to be used with [gulp][gulp] or [bulbo][bulbo].
 
 # Install
 
@@ -27,7 +28,9 @@ gulp.src('src/pages/*.html')
   .pipe(gulp.dest('site/'))
 ```
 
-src/pages/sample.html
+***Note*** You still need to install the template engine. (In the above case, you need to install `nunjucks`)
+
+src/pages/sample.html:
 
 ```html
 ---
@@ -61,6 +64,23 @@ The above settings outputs the following html into the path `site/sample.html`:
   <p>Hello, world!</p>
 </body>
 </html>
+```
+
+## Use with bulbo
+
+bulbofile.js:
+
+```js
+const frontMatter = require('gulp-front-matter')
+const wrapper = require('layout-wrapper')
+
+asset('src/pages/*.html')
+  .pipe(frontMatter())
+  .pipe(wrapper({
+    layout: 'src/layouts',
+    data: {name: 'world'},
+    engine: 'nunjucks'
+  }))
 ```
 
 # API
@@ -100,3 +120,6 @@ The above is equivalent of `engine: 'nunjucks'` call of `wrapper`.
 # License
 
 MIT
+
+[gulp]: http://gulpjs.com/
+[bulbo]: https://github.com/kt3k/bulbo
