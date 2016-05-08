@@ -2,6 +2,8 @@ const wrap = require('gulp-wrap')
 const fs = require('fs')
 const path = require('path')
 
+const ref = '\nSee https://github.com/kt3k/layout-wrapper'
+
 /**
  * @param {object} options - The options
  * @param {string} options.layout - The directory of the layout files. Required.
@@ -15,6 +17,7 @@ const path = require('path')
 module.exports = options => {
 
   options = options || {}
+
   const layoutDir = options.layout
   const engine = options.engine || 'lodash'
   const templateData = options.data
@@ -22,6 +25,10 @@ module.exports = options => {
   const layoutPropName = options.layoutProp || 'layout'
   const defaultLayout = options.defaultLayout || 'default'
   const extname = options.extname || '.' + engine
+
+  if (typeof layoutDir === 'undefined') {
+    throw new Error('`layout` option is required' + ref)
+  }
 
   return wrap(data => {
 

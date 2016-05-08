@@ -1,7 +1,6 @@
 const wrapper = require('../')
 
 const test = require('tape')
-const Transform = require('stream').Transform
 const path = require('path')
 const concat = require('concat-stream')
 const vfs = require('vinyl-fs')
@@ -9,9 +8,17 @@ const frontMatter = require('gulp-front-matter')
 
 const root = path.join(__dirname, 'fixture')
 
-test('it returns a transform', t => {
+test('it returns a stream', t => {
 
-  t.ok(typeof wrapper().pipe === 'function')
+  t.ok(typeof wrapper({layout: ''}).pipe === 'function')
+
+  t.end()
+
+})
+
+test('it throws an error when the layout is not given', t => {
+
+  t.throws(() => wrapper())
 
   t.end()
 
