@@ -36,4 +36,19 @@ test('it wraps with the given template', t => {
     t.equal(data[0].contents.toString().trim(), '<div class="page"><span>foo</span>\n</div>')
     t.end()
   }))
+
+})
+
+test('it has alias method of the template engine names', t => {
+
+  vfs.src(path.join(root, 'pages/foo.html'))
+  .pipe(frontMatter())
+  .pipe(wrapper.nunjucks({
+    layout: path.join(root, 'layouts')
+  }))
+  .pipe(concat(data => {
+    t.equal(data[0].contents.toString().trim(), '<div class="page"><span>foo</span>\n</div>')
+    t.end()
+  }))
+
 })
