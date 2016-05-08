@@ -1,4 +1,4 @@
-# layout-wrapper v0.1.0
+# layout-wrapper v1.0.0
 
 > Wrap the contents in the layout template. gulpfriendly.
 

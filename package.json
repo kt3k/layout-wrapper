@@ -1,6 +1,6 @@
 {
   "name": "layout-wrapper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Wrap the contents in the layout template. gulpfriendly.",
   "main": "index.js",
   "scripts": {
