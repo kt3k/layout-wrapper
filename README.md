@@ -1,4 +1,4 @@
-# layout-wrapper v1.0.0
+# layout-wrapper v1.0.0 [![Circle CI](https://circleci.com/gh/kt3k/layout-wrapper.svg?style=svg)](https://circleci.com/gh/kt3k/layout-wrapper)
 
 > Wrap the contents in the layout template. gulpfriendly.
 
