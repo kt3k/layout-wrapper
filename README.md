@@ -20,7 +20,7 @@ const wrapper = require('layout-wrapper')
 gulp.src('src/pages/*.html')
   .pipe(frontMatter())
   .pipe(wrapper({
-    layout: 'src/layouts'
+    layout: 'src/layouts',
     data: {name: 'world'},
     engine: 'nunjucks'
   }))
@@ -80,6 +80,22 @@ const wrapper = require('layout-wrapper')
 - @return {Transform<Vinyl, Vinyl>}
 
 This returns the transform stream from vinyl to vinyl. This transforms
+
+## Alias methods
+
+You can also use alias methods.
+
+```js
+gulp.src('src/pages/*.html')
+  .pipe(frontMatter())
+  .pipe(wrapper.nunjucks({
+    layout: 'src/layouts',
+    data: {name: 'world'}
+  }))
+  .pipe(gulp.dest('site/'))
+```
+
+The above is equivalent of `engine: 'nunjucks'` call of `wrapper`.
 
 # License
 
