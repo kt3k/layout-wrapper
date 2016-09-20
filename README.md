@@ -97,6 +97,8 @@ const wrapper = require('layout-wrapper')
 - @param {object} [options.data] - The additional data which is passed to the layout engine.
 - @param {string} [options.frontMatterProp] - The name of the property where the front matter object is stored in vinyl. Default is `frontMatter`.
 - @param {string} [options.layoutProp] - The name of the property of layout pattern in a front matter. Default is `'layout'`.
+- @param {string} [options.defaultLayout] - The default layout name when the layout property is not given in the front matter. Default is `default`.
+- @param {string} [options.extname] - The name of file extension name for template files. Default is `'.' + engine name` e.g. `.lodash` `.ejs` `.nunjucks` etc.
 - @return {Transform<Vinyl, Vinyl>}
 
 This returns the transform stream from vinyl to vinyl. This transforms
