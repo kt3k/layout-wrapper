@@ -33,7 +33,7 @@
     "gulp-wrap": "^0.13.0"
   },
   "devDependencies": {
-    "codecov": "^1.0.1",
+    "codecov": "^2.0.1",
     "concat-stream": "^1.5.1",
     "gulp-front-matter": "^1.3.0",
     "nunjucks": "^3.0.0",
