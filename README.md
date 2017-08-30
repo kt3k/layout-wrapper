@@ -1,10 +1,14 @@
-# layout-wrapper v1.1.1 [![Circle CI](https://circleci.com/gh/kt3k/layout-wrapper.svg?style=svg)](https://circleci.com/gh/kt3k/layout-wrapper) [![codecov](https://codecov.io/gh/kt3k/layout-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/layout-wrapper)
+# layout-wrapper v1.1.1
 
+[![Circle CI](https://circleci.com/gh/kt3k/layout-wrapper.svg?style=svg)](https://circleci.com/gh/kt3k/layout-wrapper)
+[![codecov](https://codecov.io/gh/kt3k/layout-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/layout-wrapper)
 [![Greenkeeper badge](https://badges.greenkeeper.io/kt3k/layout-wrapper.svg)](https://greenkeeper.io/)
 
 > Wrap the contents in the layout template. gulpfriendly.
 
 This module is designed to be used with [gulp][gulp] or [bulbo][bulbo].
+
+**NOTE**: See also [layout1][], which is a more simple and flexible version of this module.
 
 # Install
 
@@ -127,3 +131,4 @@ MIT
 
 [gulp]: http://gulpjs.com/
 [bulbo]: https://github.com/kt3k/bulbo
+[layout1]: https://npm.im/layout1
