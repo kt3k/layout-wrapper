@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/kt3k/layout-wrapper#readme",
   "dependencies": {
-    "consolidate": "^0.14.1",
+    "consolidate": "^0.15.0",
     "gulp-wrap": "^0.13.0"
   },
   "devDependencies": {
