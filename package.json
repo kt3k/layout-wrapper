@@ -30,7 +30,7 @@
   "homepage": "https://github.com/kt3k/layout-wrapper#readme",
   "dependencies": {
     "consolidate": "^0.15.0",
-    "gulp-wrap": "^0.14.0"
+    "gulp-wrap": "^0.15.0"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
